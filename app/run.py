@@ -42,6 +42,11 @@ def index():
     # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
+
+    #prepare data for additional visuals
+    categories = df.iloc[:,4:]
+    categories_mean = categories.mean().sort_values(ascending=False)[1:11]
+    categories_names = list(categories_mean.index)
     
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
@@ -61,6 +66,24 @@ def index():
                 },
                 'xaxis': {
                     'title': "Genre"
+                }
+            }
+        },
+        {
+            'data': [
+                Bar(
+                    x=categories_names,
+                    y=categories_mean
+                )
+            ],
+
+            'layout': {
+                'title': 'Top Message Categories',
+                'yaxis': {
+                    'title': "Percent"
+                },
+                'xaxis': {
+                    'title': "Categories"
                 }
             }
         }
@@ -98,3 +121,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
