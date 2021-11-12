@@ -43,6 +43,6 @@ This Python script writes a machine learning pipeline that loads data from the S
 <br/>
 
 ## Licensing and Acknowledgements <a name=" aknowledge "></a>
-Disaster message dataset provided by [Figure Eight] (https://www.figure-eight.com/).
-The instructions for executing the files and sections of the webapp html are materials from Udacity. I am NOT claiming to be the author on these materials!
+Disaster message dataset provided by [Figure Eight] (https://www.figure-eight.com/).<br/>
+The instructions for executing the files and sections of the webapp html are materials from Udacity. Note to the reviewers: I am **NOT** claiming to be the author of the Installation instructions! Please do not make a plaigarism referral (again) when they match course material.
 
